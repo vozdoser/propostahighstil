@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#193c3a">
-<title>Programa Liderança com Propósito · Highsteel · Voz do Ser</title>
+<title>Programa Liderança com Propósito · Highstil · Voz do Ser</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Jost:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -218,6 +218,36 @@ p,.apoio{text-align:justify;text-justify:inter-word;
 .comfoto>.veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,60,58,.9) 0%,rgba(25,60,58,.82) 45%,rgba(25,60,58,.93) 100%);}
 .comfoto>.wrap{position:relative;z-index:2;}
 
+/* ---------- investimento ---------- */
+.planos{display:flex;flex-direction:column;gap:clamp(20px,3.4vw,26px);margin-top:clamp(34px,6vw,52px);}
+@media(min-width:760px){.planos{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}}
+@media(min-width:1180px){.planos{grid-template-columns:repeat(4,1fr);}}
+.plano{display:flex;flex-direction:column;background:#fff;color:var(--ink);
+       border-top:3px solid var(--tiffany);padding:clamp(26px,5vw,34px);
+       transition:transform .4s ease,box-shadow .4s ease;}
+.plano:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(25,60,58,.1);}
+.plano.inv{background:var(--dark);color:var(--mist);border-top-color:var(--cyan);}
+.plano .nome{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:clamp(25px,5.6vw,31px);
+             color:var(--dark);line-height:1.1;}
+.plano.inv .nome{color:#fff;}
+.plano .resumo{font-size:clamp(15px,3.8vw,16.5px);line-height:1.5;margin-top:10px;opacity:.85;}
+.plano .comp{list-style:none;margin-top:18px;padding-top:16px;border-top:1px solid rgba(25,60,58,.16);}
+.plano.inv .comp{border-top-color:rgba(225,244,242,.28);}
+.plano .comp li{position:relative;padding-left:22px;margin-bottom:9px;font-size:clamp(15px,3.8vw,16.5px);line-height:1.45;}
+.plano .comp li:last-child{margin-bottom:0;}
+.plano .comp li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:1px;background:var(--tiffany);}
+.plano.inv .comp li::before{background:var(--cyan);}
+.plano .valores{margin-top:auto;padding-top:22px;}
+.plano .lin{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+            padding:11px 0;border-top:1px solid rgba(25,60,58,.16);}
+.plano.inv .lin{border-top-color:rgba(225,244,242,.28);}
+.plano .lin b{font-family:'Jost',sans-serif;font-size:clamp(10.5px,2.6vw,11.5px);letter-spacing:.16em;
+              text-transform:uppercase;font-weight:600;opacity:.6;}
+.plano.inv .lin b{color:var(--mist);opacity:.8;}
+.plano .lin span{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;
+                 font-size:clamp(17px,4vw,20px);color:var(--tiffany);white-space:nowrap;}
+.plano.inv .lin span{color:var(--cyan);}
+
 /* ---------- números ---------- */
 .nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(225,244,242,.25);
       margin-top:clamp(30px,6vw,44px);}
@@ -276,7 +306,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
 <header class="topo" id="topo">
   <div class="wrap">
     <img src="assets/logo_vozdoser-bco.png" alt="Voz do Ser">
-    <div class="ident">Proposta · Highsteel<span>15.10.2026</span></div>
+    <div class="ident">Proposta · Highstil<span>15.10.2026</span></div>
   </div>
 </header>
 
@@ -290,7 +320,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
   <div class="wrap">
     <div class="marca">Voz do Ser</div>
     <h1>Programa Liderança com <em>Propósito</em></h1>
-    <p class="sub lead">Comunicação, saúde mental, relacionamentos e inteligência relacional para as lideranças da Highsteel.</p>
+    <p class="sub lead">Comunicação, saúde mental, relacionamentos e inteligência relacional para as lideranças da Highstil.</p>
     <div class="meta">
       <span>Três etapas</span>
       <span>Quatro estratégias</span>
@@ -308,7 +338,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
   </div>
   <div class="wrap dupla" style="margin-top:clamp(6px,2vw,18px);">
     <div>
-    <p class="apoio rev" style="margin-top:0;">O Programa Liderança com Propósito, desenhado para as lideranças da Highsteel, tem o objetivo de desenvolver habilidades essenciais para uma liderança que valoriza comunicação, saúde mental, relacionamentos, inteligência emocional e inteligência relacional.</p>
+    <p class="apoio rev" style="margin-top:0;">O Programa Liderança com Propósito, desenhado para as lideranças da Highstil, tem o objetivo de desenvolver habilidades essenciais para uma liderança que valoriza comunicação, saúde mental, relacionamentos, inteligência emocional e inteligência relacional.</p>
     <p class="apoio rev" style="margin-top:18px;">Com uma abordagem prática e aplicada aos desafios reais da liderança, o programa promove autoconhecimento, fortalece a comunicação e amplia a capacidade de engajar, desenvolver e se relacionar com diferentes perfis de pessoas.</p>
     <p class="apoio rev" style="margin-top:18px;border-left:3px solid var(--tiffany);padding-left:20px;color:var(--dark);">Para que o programa possa se adequar ao momento, às necessidades e à profundidade de desenvolvimento desejada pela empresa, estruturamos <b>quatro estratégias de implementação: PP, P, M e G</b>. Cada uma propõe um nível diferente de aprofundamento e acompanhamento.</p>
     </div>
@@ -374,7 +404,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
     <p class="rev centro" style="color:var(--mist);max-width:62ch;margin-top:clamp(18px,4vw,26px);">Uma experiência imersiva desenvolvida para os 15&nbsp;líderes, unindo conteúdo, prática, reflexão e simulações de situações reais de liderança.</p>
     <div class="caixa rev centro" style="border-left:none;border-top:3px solid var(--cyan);max-width:72ch;margin-top:clamp(26px,5vw,38px);">
       <div class="olho meio" style="color:var(--cyan);">Onde acontece</div>
-      <p style="color:var(--mist);">O workshop poderá ser realizado <b style="color:#fff;">in company</b> ou <b style="color:#fff;">no Espaço Voz do Ser</b>, em uma experiência especialmente preparada para receber as lideranças da Highsteel, com estrutura completa, coffee break, intervenções musicais e toda a estrutura híbrida necessária para que todos se sintam participando.</p>
+      <p style="color:var(--mist);">O workshop poderá ser realizado <b style="color:#fff;">in company</b> ou <b style="color:#fff;">no Espaço Voz do Ser</b>, em uma experiência especialmente preparada para receber as lideranças da Highstil, com estrutura completa, coffee break, intervenções musicais e toda a estrutura híbrida necessária para que todos se sintam participando.</p>
     </div>
     <div class="carrossel rev">
       <div class="trilha">
@@ -434,7 +464,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
   <div class="wrap">
     <div class="olho rev">Estratégias de implementação</div>
     <h2 class="rev" style="color:#fff;">Quatro caminhos, <em>PP, P, M e G</em></h2>
-    <p class="lead rev larg" style="color:var(--mist);">Cada estratégia combina as etapas de um jeito diferente, permitindo que a Highsteel escolha o formato que melhor responde aos seus desafios atuais e aos objetivos com as lideranças.</p>
+    <p class="lead rev larg" style="color:var(--mist);">Cada estratégia combina as etapas de um jeito diferente, permitindo que a Highstil escolha o formato que melhor responde aos seus desafios atuais e aos objetivos com as lideranças.</p>
     <div class="estrategias">
 
       <div class="estrat rev">
@@ -481,6 +511,53 @@ p,.apoio{text-align:justify;text-justify:inter-word;
         <div class="onde">In company<br>ou no Voz do Ser</div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ======================= INVESTIMENTO ======================= -->
+<section id="investimento" style="background:#fff;">
+  <div class="wrap">
+    <div class="olho rev">Investimento</div>
+    <h2 class="rev">As quatro <em>estratégias</em></h2>
+    <p class="rev larg">Os valores de cada estratégia estão em definição e serão enviados em seguida. Em todas elas, o workshop da Etapa 2 pode acontecer in company ou no Espaço Voz do Ser, e o investimento muda conforme o local escolhido.</p>
+    <div class="planos">
+      <div class="plano rev">
+        <div class="nome">Proposta PP</div>
+        <div class="resumo">Só o workshop.</div>
+        <ul class="comp"><li>Etapa 2 · Workshop de 4&nbsp;horas para 15&nbsp;líderes</li></ul>
+        <div class="valores">
+          <div class="lin"><b>In company</b><span>A definir</span></div>
+          <div class="lin"><b>No Voz do Ser</b><span>A definir</span></div>
+        </div>
+      </div>
+      <div class="plano rev">
+        <div class="nome">Proposta P</div>
+        <div class="resumo">Mentorias individuais e workshop.</div>
+        <ul class="comp"><li>Etapa 1 · 15&nbsp;mentorias individuais</li><li>Etapa 2 · Workshop de 4&nbsp;horas</li></ul>
+        <div class="valores">
+          <div class="lin"><b>In company</b><span>A definir</span></div>
+          <div class="lin"><b>No Voz do Ser</b><span>A definir</span></div>
+        </div>
+      </div>
+      <div class="plano rev">
+        <div class="nome">Proposta M</div>
+        <div class="resumo">Workshop e acompanhamento no ano.</div>
+        <ul class="comp"><li>Etapa 2 · Workshop de 4&nbsp;horas</li><li>Etapa 3 · 6&nbsp;treinamentos bimestrais</li></ul>
+        <div class="valores">
+          <div class="lin"><b>In company</b><span>A definir</span></div>
+          <div class="lin"><b>No Voz do Ser</b><span>A definir</span></div>
+        </div>
+      </div>
+      <div class="plano inv rev">
+        <div class="nome">Proposta G</div>
+        <div class="resumo">A jornada completa.</div>
+        <ul class="comp"><li>Etapa 1 · 15&nbsp;mentorias individuais</li><li>Etapa 2 · Workshop de 4&nbsp;horas</li><li>Etapa 3 · 6&nbsp;treinamentos bimestrais</li></ul>
+        <div class="valores">
+          <div class="lin"><b>In company</b><span>A definir</span></div>
+          <div class="lin"><b>No Voz do Ser</b><span>A definir</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -575,7 +652,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
   <div class="wrap">
     <div class="olho rev">Próximo passo</div>
     <h2 class="rev">Escolhido o caminho, <em>desenhamos o calendário</em></h2>
-    <p class="lead rev" style="color:var(--mist);max-width:56ch;">Estamos à disposição para detalhar a estratégia que fizer mais sentido para a Highsteel e alinhar as datas.</p>
+    <p class="lead rev" style="color:var(--mist);max-width:56ch;">Estamos à disposição para detalhar a estratégia que fizer mais sentido para a Highstil e alinhar as datas.</p>
     <div class="canais rev">
       <a href="https://wa.me/5511987792244"><b>WhatsApp</b><span>(11) 98779-2244 · Silvia Maciel</span></a>
       <a href="mailto:falecom@vozdoser.com.br"><b>E-mail</b><span>falecom@vozdoser.com.br</span></a>
