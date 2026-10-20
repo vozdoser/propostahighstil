@@ -237,7 +237,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
 .plano .comp li:last-child{margin-bottom:0;}
 .plano .comp li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:1px;background:var(--tiffany);}
 .plano.inv .comp li::before{background:var(--cyan);}
-.plano .valores{margin-top:auto;padding-top:22px;}
+.plano .valores{margin-top:14px;}
 .plano .lin{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
             padding:11px 0;border-top:1px solid rgba(25,60,58,.16);}
 .plano.inv .lin{border-top-color:rgba(225,244,242,.28);}
@@ -247,6 +247,38 @@ p,.apoio{text-align:justify;text-justify:inter-word;
 .plano .lin span{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;
                  font-size:clamp(17px,4vw,20px);color:var(--tiffany);white-space:nowrap;}
 .plano.inv .lin span{color:var(--cyan);}
+
+.plano .eco+.valores{margin-top:8px;}
+.plano .eco{font-size:clamp(13px,3.3vw,14px);font-weight:600;color:var(--tiffany);margin-top:12px;}
+.plano.inv .eco{color:var(--cyan);}
+.plano .pgto{font-size:clamp(13.5px,3.4vw,14.5px);line-height:1.45;margin-top:14px;padding-top:12px;
+             border-top:1px solid rgba(25,60,58,.16);opacity:.75;}
+.plano.inv .pgto{border-top-color:rgba(225,244,242,.28);opacity:.9;}
+.etapas-valor{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(25,60,58,.14);
+              margin-top:clamp(28px,5vw,38px);}
+@media(min-width:760px){.etapas-valor{grid-template-columns:repeat(3,1fr);}}
+.etapas-valor>div{background:var(--paper);padding:clamp(18px,4vw,24px);}
+.etapas-valor .et{font-family:'Jost',sans-serif;font-size:clamp(10.5px,2.6vw,11.5px);letter-spacing:.18em;
+                  text-transform:uppercase;font-weight:600;color:var(--tiffany);}
+.etapas-valor .vl{font-family:'Fraunces',Georgia,serif;font-size:clamp(22px,5vw,27px);color:var(--dark);
+                  line-height:1.1;margin-top:9px;}
+.etapas-valor .ob{font-size:clamp(13px,3.3vw,14px);line-height:1.45;opacity:.7;margin-top:7px;}
+
+.plano .opcao{margin-top:12px;padding-top:12px;border-top:1px solid rgba(25,60,58,.16);}
+.plano.inv .opcao{border-top-color:rgba(225,244,242,.28);}
+.plano .opcao .cab{display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+.plano .opcao .loc{font-family:'Jost',sans-serif;font-size:clamp(10.5px,2.6vw,11.5px);letter-spacing:.16em;
+                   text-transform:uppercase;font-weight:600;opacity:.6;}
+.plano.inv .opcao .loc{color:var(--mist);opacity:.85;}
+.plano .opcao .vl{font-family:'Fraunces',Georgia,serif;font-size:clamp(19px,4.4vw,23px);color:var(--dark);white-space:nowrap;}
+.plano.inv .opcao .vl{color:#fff;}
+.plano .opcao .fp{font-size:clamp(13px,3.3vw,14px);line-height:1.45;margin-top:8px;opacity:.75;}
+.plano.inv .opcao .fp{opacity:.9;}
+.plano .opcao .fp b{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+                    font-weight:600;color:var(--tiffany);display:block;margin-bottom:3px;}
+.plano.inv .opcao .fp b{color:var(--cyan);}
+.etapas-valor .vl2{font-family:'Fraunces',Georgia,serif;font-size:clamp(22px,5vw,27px);color:var(--dark);
+                   line-height:1.1;margin-top:6px;}
 
 /* ---------- números ---------- */
 .nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(225,244,242,.25);
@@ -306,7 +338,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
 <header class="topo" id="topo">
   <div class="wrap">
     <img src="assets/logo_vozdoser-bco.png" alt="Voz do Ser">
-    <div class="ident">Proposta · Highstil<span>15.10.2026</span></div>
+    <div class="ident">Proposta · Highstil<span>20.10.2026</span></div>
   </div>
 </header>
 
@@ -385,7 +417,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
       <div class="bloco inv rev">
         <div class="tag">Formato</div>
         <h3>Um encontro por líder</h3>
-        <div class="quando">2&nbsp;horas cada · presencial ou online</div>
+        <div class="quando">2&nbsp;horas cada · presencial in company ou online</div>
         <p>Cada mentoria é desenhada a partir do momento e dos desafios do líder, com devolutiva e direcionamentos práticos para o seu dia a dia.</p>
       </div>
     </div>
@@ -404,7 +436,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
     <p class="rev centro" style="color:var(--mist);max-width:62ch;margin-top:clamp(18px,4vw,26px);">Uma experiência imersiva desenvolvida para os 15&nbsp;líderes, unindo conteúdo, prática, reflexão e simulações de situações reais de liderança.</p>
     <div class="caixa rev centro" style="border-left:none;border-top:3px solid var(--cyan);max-width:72ch;margin-top:clamp(26px,5vw,38px);">
       <div class="olho meio" style="color:var(--cyan);">Onde acontece</div>
-      <p style="color:var(--mist);">O workshop poderá ser realizado <b style="color:#fff;">in company</b> ou <b style="color:#fff;">no Espaço Voz do Ser</b>, em uma experiência especialmente preparada para receber as lideranças da Highstil, com estrutura completa, coffee break, intervenções musicais e toda a estrutura híbrida necessária para que todos se sintam participando.</p>
+      <p style="color:var(--mist);">O workshop poderá ser realizado <b style="color:#fff;">in company</b>, nas instalações da Highstil, ou <b style="color:#fff;">no Espaço Voz do Ser</b>. No Espaço Voz do Ser, a experiência é especialmente preparada para receber as lideranças, com café da manhã, intervenções musicais, sala, som e toda a estrutura e o suporte do espaço para que o encontro aconteça.</p>
     </div>
     <div class="carrossel rev">
       <div class="trilha">
@@ -449,7 +481,7 @@ p,.apoio{text-align:justify;text-justify:inter-word;
       <div class="bloco inv rev">
         <div class="tag">O objetivo</div>
         <h3>Continuidade ao desenvolvimento</h3>
-        <div class="quando">6&nbsp;encontros · 50&nbsp;participantes</div>
+        <div class="quando">6&nbsp;encontros presenciais in company · 50&nbsp;participantes</div>
         <p>Garantir que os aprendizados sejam revisitados, aprofundados e aplicados à realidade da liderança, com acompanhamento ao longo de todo o ano.</p>
       </div>
     </div>
@@ -472,9 +504,8 @@ p,.apoio{text-align:justify;text-justify:inter-word;
         <div class="tag">Estratégia PP</div>
         <h3>Só o workshop</h3>
         <ul class="comp">
-          <li>Etapa 2 · Workshop de 4&nbsp;horas para 15&nbsp;líderes</li>
+          <li>Etapa 2 · Workshop de 4&nbsp;horas para 15&nbsp;líderes <i style="opacity:.7;">(in company ou no Voz do Ser)</i></li>
         </ul>
-        <div class="onde">In company<br>ou no Voz do Ser</div>
       </div>
 
       <div class="estrat rev">
@@ -483,9 +514,8 @@ p,.apoio{text-align:justify;text-justify:inter-word;
         <h3>Mentorias individuais e workshop</h3>
         <ul class="comp">
           <li>Etapa 1 · 15&nbsp;mentorias individuais</li>
-          <li>Etapa 2 · Workshop de 4&nbsp;horas</li>
+          <li>Etapa 2 · Workshop de 4&nbsp;horas <i style="opacity:.7;">(in company ou no Voz do Ser)</i></li>
         </ul>
-        <div class="onde">In company<br>ou no Voz do Ser</div>
       </div>
 
       <div class="estrat rev">
@@ -493,10 +523,9 @@ p,.apoio{text-align:justify;text-justify:inter-word;
         <div class="tag">Estratégia M</div>
         <h3>Workshop e acompanhamento no ano</h3>
         <ul class="comp">
-          <li>Etapa 2 · Workshop de 4&nbsp;horas</li>
+          <li>Etapa 2 · Workshop de 4&nbsp;horas <i style="opacity:.7;">(in company ou no Voz do Ser)</i></li>
           <li>Etapa 3 · 6&nbsp;treinamentos bimestrais para 50&nbsp;pessoas</li>
         </ul>
-        <div class="onde">In company<br>ou no Voz do Ser</div>
       </div>
 
       <div class="estrat inv rev">
@@ -505,10 +534,9 @@ p,.apoio{text-align:justify;text-justify:inter-word;
         <h3>A jornada completa</h3>
         <ul class="comp">
           <li>Etapa 1 · 15&nbsp;mentorias individuais</li>
-          <li>Etapa 2 · Workshop de 4&nbsp;horas</li>
+          <li>Etapa 2 · Workshop de 4&nbsp;horas <i style="opacity:.7;">(in company ou no Voz do Ser)</i></li>
           <li>Etapa 3 · 6&nbsp;treinamentos bimestrais para 50&nbsp;pessoas</li>
         </ul>
-        <div class="onde">In company<br>ou no Voz do Ser</div>
       </div>
 
     </div>
@@ -520,45 +548,44 @@ p,.apoio{text-align:justify;text-justify:inter-word;
   <div class="wrap">
     <div class="olho rev">Investimento</div>
     <h2 class="rev">As quatro <em>estratégias</em></h2>
-    <p class="rev larg">Os valores de cada estratégia estão em definição e serão enviados em seguida. Em todas elas, o workshop da Etapa 2 pode acontecer in company ou no Espaço Voz do Ser, e o investimento muda conforme o local escolhido.</p>
+    <p class="rev larg">As mentorias individuais e os treinamentos bimestrais acontecem sempre na Highstil. A única etapa com escolha de local é o <b>workshop de 4&nbsp;horas</b>, que pode ser realizado in company ou no Espaço Voz do Ser.</p>
+    <p class="rev larg" style="margin-top:14px;border-left:3px solid var(--tiffany);padding-left:20px;color:var(--dark);">No Espaço Voz do Ser, o workshop inclui o café da manhã para os 15&nbsp;líderes, além da sala, do som, de toda a estrutura do espaço e do suporte necessário para que o encontro aconteça.</p>
+    <div class="etapas-valor rev">
+      <div><div class="et">Etapa 1 · sempre na Highstil</div><div class="vl">R$&nbsp;30.030,00</div><div class="ob">15&nbsp;mentorias individuais</div></div>
+      <div><div class="et">Etapa 2 · escolha de local</div><div class="vl">R$&nbsp;7.665,00 · in company</div><div class="vl2">R$&nbsp;10.165,00 · no Voz do Ser</div><div class="ob">Workshop de 4&nbsp;horas para 15&nbsp;líderes</div></div>
+      <div><div class="et">Etapa 3 · sempre na Highstil</div><div class="vl">R$&nbsp;22.050,00</div><div class="ob">6&nbsp;treinamentos bimestrais</div></div>
+    </div>
     <div class="planos">
       <div class="plano rev">
         <div class="nome">Proposta PP</div>
         <div class="resumo">Só o workshop.</div>
         <ul class="comp"><li>Etapa 2 · Workshop de 4&nbsp;horas para 15&nbsp;líderes</li></ul>
-        <div class="valores">
-          <div class="lin"><b>In company</b><span>A definir</span></div>
-          <div class="lin"><b>No Voz do Ser</b><span>A definir</span></div>
-        </div>
+        
+        <div class="valores"><div class="opcao"><div class="cab"><div class="loc">Workshop in company</div><div class="vl">R$ 7.665,00</div></div></div><div class="opcao"><div class="cab"><div class="loc">Workshop no Voz do Ser</div><div class="vl">R$ 10.165,00</div></div></div><div class="opcao"><div class="fp"><b>Forma de pagamento</b>Em até 2&nbsp;vezes</div></div></div>
       </div>
       <div class="plano rev">
         <div class="nome">Proposta P</div>
         <div class="resumo">Mentorias individuais e workshop.</div>
         <ul class="comp"><li>Etapa 1 · 15&nbsp;mentorias individuais</li><li>Etapa 2 · Workshop de 4&nbsp;horas</li></ul>
-        <div class="valores">
-          <div class="lin"><b>In company</b><span>A definir</span></div>
-          <div class="lin"><b>No Voz do Ser</b><span>A definir</span></div>
-        </div>
+        <div class="eco">10% de desconto no conjunto</div>
+        <div class="valores"><div class="opcao"><div class="cab"><div class="loc">Workshop in company</div><div class="vl">R$ 33.925,50</div></div></div><div class="opcao"><div class="cab"><div class="loc">Workshop no Voz do Ser</div><div class="vl">R$ 36.175,50</div></div></div><div class="opcao"><div class="fp"><b>Forma de pagamento</b>Em até 3&nbsp;vezes</div></div></div>
       </div>
       <div class="plano rev">
         <div class="nome">Proposta M</div>
         <div class="resumo">Workshop e acompanhamento no ano.</div>
         <ul class="comp"><li>Etapa 2 · Workshop de 4&nbsp;horas</li><li>Etapa 3 · 6&nbsp;treinamentos bimestrais</li></ul>
-        <div class="valores">
-          <div class="lin"><b>In company</b><span>A definir</span></div>
-          <div class="lin"><b>No Voz do Ser</b><span>A definir</span></div>
-        </div>
+        <div class="eco">10% de desconto no conjunto</div>
+        <div class="valores"><div class="opcao"><div class="cab"><div class="loc">Workshop in company</div><div class="vl">R$ 26.743,50</div></div><div class="fp">Entrada de R$&nbsp;6.000,00 e 9&nbsp;parcelas de R$&nbsp;2.304,83</div></div><div class="opcao"><div class="cab"><div class="loc">Workshop no Voz do Ser</div><div class="vl">R$ 28.993,50</div></div><div class="fp">Entrada de R$&nbsp;5.798,70 e 9&nbsp;parcelas de R$&nbsp;2.577,20</div></div></div>
       </div>
       <div class="plano inv rev">
         <div class="nome">Proposta G</div>
         <div class="resumo">A jornada completa.</div>
         <ul class="comp"><li>Etapa 1 · 15&nbsp;mentorias individuais</li><li>Etapa 2 · Workshop de 4&nbsp;horas</li><li>Etapa 3 · 6&nbsp;treinamentos bimestrais</li></ul>
-        <div class="valores">
-          <div class="lin"><b>In company</b><span>A definir</span></div>
-          <div class="lin"><b>No Voz do Ser</b><span>A definir</span></div>
-        </div>
+        <div class="eco">15% de desconto no conjunto</div>
+        <div class="valores"><div class="opcao"><div class="cab"><div class="loc">Workshop in company</div><div class="vl">R$ 50.783,25</div></div><div class="fp">Entrada de R$&nbsp;10.156,65 e 11&nbsp;parcelas de R$&nbsp;3.693,33</div></div><div class="opcao"><div class="cab"><div class="loc">Workshop no Voz do Ser</div><div class="vl">R$ 52.908,25</div></div><div class="fp">Entrada de R$&nbsp;10.581,65 e 11&nbsp;parcelas de R$&nbsp;3.847,87</div></div></div>
       </div>
     </div>
+    <p class="rev" style="font-size:clamp(13.5px,3.4vw,14.5px);opacity:.7;margin-top:clamp(24px,5vw,32px);">Os valores das estratégias P, M e G já estão com o desconto aplicado ao conjunto.</p>
   </div>
 </section>
 
