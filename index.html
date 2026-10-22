@@ -3,746 +3,358 @@
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#193c3a">
-<title>Programa Liderança com Propósito · Highstil · Voz do Ser</title>
+<meta name="viewport" content="width=1336">
+<title>Mentoria Liderança com Propósito · Wallquiria Santos · Voz do Ser</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Jost:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Jost:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   BASE — mobile primeiro
-   ============================================================ */
-:root{
-  --dark:#193c3a; --deep:#0f2927; --tiffany:#00d0ca; --cyan:#4bfff6;
-  --mist:#e1f4f2; --ink:#1c2b2a; --paper:#fbfdfd;
-  --gut:clamp(22px,5.5vw,88px);
-  --maxw:1420px;
-}
-*{margin:0;padding:0;box-sizing:border-box;border-radius:0 !important;}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
-body{font-family:'Karla',system-ui,Arial,sans-serif;color:var(--ink);background:var(--paper);
-     line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-img{display:block;max-width:100%;}
-a{color:inherit;text-decoration:none;}
-.serif{font-family:'Fraunces',Georgia,serif;}
-
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);}
-section{position:relative;padding:clamp(72px,16vw,160px) 0;}
-.esc{background:var(--dark);color:var(--mist);}
-.deep{background:var(--deep);color:var(--mist);}
-
-.olho{font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(10.5px,2.6vw,12.5px);
-      letter-spacing:.3em;text-transform:uppercase;color:var(--tiffany);margin-bottom:clamp(18px,4vw,28px);
-      display:flex;align-items:center;gap:14px;}
-.olho::after{content:"";flex:1;height:1px;background:currentColor;opacity:.35;max-width:120px;}
-.esc .olho,.deep .olho{color:var(--cyan);}
-
-h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:-.015em;}
-h2{font-size:clamp(34px,8.5vw,72px);color:var(--dark);margin-bottom:clamp(20px,4vw,34px);}
-.esc h2,.deep h2{color:#fff;}
-h2 em,h1 em{font-style:italic;font-weight:300;color:var(--tiffany);}
-.esc h2 em,.deep h2 em,.esc h1 em{color:var(--cyan);}
-h3{font-size:clamp(23px,5.4vw,32px);color:var(--dark);line-height:1.12;}
-.esc h3,.deep h3{color:#fff;}
-p{font-size:clamp(16.5px,4.3vw,19px);line-height:1.65;}
-@media(min-width:640px){p{font-size:clamp(17px,1.5vw,19px);}}
-.lead{font-size:clamp(19px,5.2vw,26px);line-height:1.5;font-weight:300;}
-@media(min-width:640px){.lead{font-size:clamp(20px,2.1vw,27px);}}
-.med{max-width:52ch;} .larg{max-width:80ch;}
-
-/* so texto corrido e justificado; topico/bullet/listagem fica alinhado a esquerda */
-p,.apoio{text-align:justify;text-justify:inter-word;
-   -webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;}
-
-/* ---------- barra de progresso + topo ---------- */
-.prog{position:fixed;top:0;left:0;height:3px;background:var(--tiffany);width:0;z-index:300;transition:width .1s linear;}
-.topo{position:fixed;top:0;left:0;right:0;z-index:200;padding:14px 0;
-      background:rgba(15,41,39,0);transform:translateY(-100%);transition:transform .45s ease,background .45s ease;}
-.topo.on{transform:none;background:rgba(15,41,39,.94);backdrop-filter:blur(10px);}
-.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.topo img{height:clamp(38px,9vw,52px);width:auto;}
-.topo .ident{font-family:'Jost',sans-serif;font-size:clamp(10px,2.5vw,12px);letter-spacing:.18em;
-             text-transform:uppercase;font-weight:600;color:var(--mist);text-align:right;line-height:1.6;}
-.topo .ident span{display:block;color:var(--cyan);}
-
-/* ---------- hero ---------- */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
-      position:relative;overflow:hidden;background:var(--dark);color:#fff;
-      padding:clamp(100px,18vw,140px) 0 clamp(40px,10vw,70px);}
-.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3;filter:saturate(.6);
-          animation:zoom 18s ease-out forwards;}
-@keyframes zoom{from{transform:scale(1.1)}to{transform:scale(1)}}
-.hero .veu{position:absolute;inset:0;background:
-   linear-gradient(180deg,rgba(15,41,39,.82) 0%,rgba(15,41,39,.55) 35%,rgba(15,41,39,.95) 100%);}
-.hero .wrap{position:relative;z-index:2;width:100%;}
-.marca{font-family:'Jost',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
-       color:var(--tiffany);font-size:clamp(30px,8.4vw,60px);line-height:1;margin-bottom:clamp(18px,4vw,26px);}
-.hero h1{font-size:clamp(34px,8.6vw,78px);color:#fff;}
-.hero .sub{margin-top:clamp(20px,5vw,30px);color:var(--mist);max-width:48ch;}
-.hero .meta{margin-top:clamp(34px,8vw,58px);padding-top:20px;border-top:1px solid rgba(225,244,242,.3);
-            display:flex;flex-wrap:wrap;gap:8px 28px;font-family:'Jost',sans-serif;font-weight:500;
-            font-size:clamp(11px,2.8vw,13px);letter-spacing:.2em;text-transform:uppercase;color:var(--mist);}
-.rolar{margin-top:clamp(26px,6vw,40px);display:inline-flex;align-items:center;gap:12px;
-       font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);}
-.rolar i{width:1px;height:34px;background:var(--cyan);display:block;animation:desce 1.8s ease-in-out infinite;transform-origin:top;}
-@keyframes desce{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
-
-/* ---------- assinatura (logo no topo da capa) ---------- */
-.assinatura{position:relative;z-index:2;display:flex;align-items:center;
-            gap:clamp(16px,3.4vw,26px);margin-bottom:auto;}
-.assinatura img{height:clamp(36px,8.4vw,52px);width:auto;}
-
-/* ---------- manifesto ---------- */
-.manifesto .apoio{font-family:'Karla',sans-serif;font-size:clamp(16.5px,4.3vw,19px);line-height:1.65;
-                  font-weight:400;color:var(--ink);max-width:64ch;margin-top:clamp(28px,6vw,44px);letter-spacing:0;}
-
-/* ---------- fotos ---------- */
-.dupla{display:flex;flex-direction:column;gap:clamp(30px,6vw,56px);}
-@media(min-width:960px){.dupla{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:clamp(40px,5vw,72px);}}
-.retrato{width:100%;aspect-ratio:4/3;object-fit:cover;}
-.faixa-foto{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 50%;margin-top:clamp(32px,6vw,52px);}
-@media(min-width:960px){.faixa-foto{aspect-ratio:21/9;}}
-/* banner mantem a proporcao original do arquivo, sem recorte */
-.faixa-foto.banner{aspect-ratio:1693/493;}
-@media(min-width:960px){.faixa-foto.banner{aspect-ratio:1693/493;}}
-
-/* ---------- lista numerada ---------- */
-.temas{margin-top:clamp(30px,6vw,48px);}
-.tema{display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,4vw,32px);align-items:baseline;
-      padding:clamp(20px,4.4vw,30px) 0;border-top:1px solid rgba(25,60,58,.16);}
-.tema:last-child{border-bottom:1px solid rgba(25,60,58,.16);}
-.tema .n{font-family:'Fraunces',Georgia,serif;font-size:clamp(17px,4vw,22px);color:var(--tiffany);
-         font-weight:400;min-width:2.2ch;}
-.tema .t{font-size:clamp(18px,4.8vw,26px);line-height:1.3;color:var(--dark);font-weight:400;}
-@media(min-width:900px){
-  .temas{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(40px,5vw,80px);}
-  .tema:nth-child(4){border-bottom:1px solid rgba(25,60,58,.16);}
-}
-
-/* ---------- chapéu de capítulo ---------- */
-.cap{position:relative;overflow:hidden;}
-.cap .letra{position:absolute;right:-.1em;top:50%;transform:translateY(-50%);
-            font-family:'Fraunces',Georgia,serif;font-weight:300;line-height:.8;
-            font-size:clamp(230px,52vw,560px);color:var(--tiffany);opacity:.07;pointer-events:none;z-index:0;}
-.cap .wrap{position:relative;z-index:1;}
-.esc .cap .letra,.deep .letra{color:var(--cyan);opacity:.09;}
-
-/* ---------- blocos ---------- */
-.etapas{display:flex;flex-direction:column;gap:clamp(18px,4vw,26px);margin-top:clamp(30px,6vw,46px);}
-.bloco{background:#fff;border-top:3px solid var(--tiffany);padding:clamp(26px,6vw,40px);
-       box-shadow:0 1px 0 rgba(25,60,58,.06);transition:transform .4s ease,box-shadow .4s ease;}
-.bloco:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(25,60,58,.1);}
-.bloco.inv{background:var(--dark);border-top-color:var(--cyan);color:var(--mist);}
-.bloco.inv h3{color:#fff;}
-.bloco .tag{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;
-            font-weight:600;color:var(--tiffany);margin-bottom:14px;}
-.bloco.inv .tag{color:var(--cyan);}
-.bloco .quando{font-family:'Jost',sans-serif;font-size:clamp(12px,3vw,13.5px);letter-spacing:.1em;
-               text-transform:uppercase;font-weight:500;opacity:.6;margin:12px 0 18px;}
-.bloco.inv .quando{opacity:.8;color:var(--mist);}
-.bloco p{margin-bottom:0;}
-.itens{list-style:none;margin-top:22px;border-top:1px solid rgba(25,60,58,.16);padding-top:20px;}
-.bloco.inv .itens{border-top-color:rgba(225,244,242,.28);}
-.itens li{position:relative;padding-left:22px;margin-bottom:12px;font-size:clamp(16px,4.1vw,17.5px);line-height:1.5;}
-.itens li:last-child{margin-bottom:0;}
-.itens li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:1px;background:var(--tiffany);}
-.bloco.inv .itens li::before{background:var(--cyan);}
-@media(min-width:900px){
-  /* cartoes da mesma fileira sempre com a mesma altura */
-  .etapas.duo{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
-  .etapas.trio{display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch;}
-}
-
-/* ---------- cartões das quatro estratégias ---------- */
-.estrategias{display:grid;grid-template-columns:1fr;gap:clamp(18px,3vw,24px);margin-top:clamp(34px,6vw,52px);
-             align-items:stretch;}
-@media(min-width:760px){.estrategias{grid-template-columns:1fr 1fr;}}
-@media(min-width:1180px){.estrategias{grid-template-columns:repeat(4,1fr);}}
-.estrat{position:relative;overflow:hidden;background:#fff;color:var(--ink);border-top:3px solid var(--tiffany);
-        padding:clamp(26px,5vw,34px);display:flex;flex-direction:column;
-        transition:transform .4s ease,box-shadow .4s ease;}
-.estrat:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(25,60,58,.1);}
-.estrat.inv{background:var(--dark);border-top-color:var(--cyan);color:var(--mist);}
-.estrat .selo{position:absolute;right:-.06em;bottom:-.3em;font-family:'Fraunces',Georgia,serif;font-weight:300;
-              font-size:clamp(130px,17vw,190px);line-height:.8;color:var(--tiffany);opacity:.09;pointer-events:none;}
-.estrat.inv .selo{color:var(--cyan);opacity:.14;}
-.estrat .tag{position:relative;z-index:1;font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.24em;
-             text-transform:uppercase;font-weight:600;color:var(--tiffany);margin-bottom:12px;}
-.estrat.inv .tag{color:var(--cyan);}
-.estrat h3{position:relative;z-index:1;font-size:clamp(22px,4.6vw,27px);color:var(--dark);}
-.estrat.inv h3{color:#fff;}
-.estrat .comp{position:relative;z-index:1;list-style:none;margin-top:20px;padding-top:18px;
-              border-top:1px solid rgba(25,60,58,.16);}
-.estrat.inv .comp{border-top-color:rgba(225,244,242,.28);}
-.estrat .comp li{position:relative;padding-left:24px;margin-bottom:11px;font-size:clamp(15.5px,4vw,17px);line-height:1.45;}
-.estrat .comp li:last-child{margin-bottom:0;}
-.estrat .comp li::before{content:"";position:absolute;left:0;top:.52em;width:11px;height:11px;
-                         border:1px solid var(--tiffany);}
-.estrat.inv .comp li::before{border-color:var(--cyan);}
-.estrat .onde{position:relative;z-index:1;margin-top:auto;padding-top:20px;font-family:'Jost',sans-serif;
-              font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;opacity:.55;line-height:1.7;}
-.estrat.inv .onde{color:var(--cyan);opacity:1;}
-
-/* ---------- faixa de apoio ---------- */
-.jornada{margin-top:clamp(20px,4vw,28px);padding:clamp(22px,5vw,30px);background:var(--mist);
-         border-left:3px solid var(--tiffany);}
-.jornada .tt{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;
-             font-weight:600;opacity:.6;margin-bottom:10px;}
-.jornada p{font-size:clamp(16px,4.1vw,17.5px);}
-.caixa{background:rgba(225,244,242,.07);border-left:3px solid var(--cyan);padding:clamp(24px,5vw,32px);}
-
-/* ---------- carrossel ---------- */
-.centro{text-align:center;margin-left:auto;margin-right:auto;}
-.olho.meio{justify-content:center;}
-.olho.meio::after{display:none;}
-.carrossel{position:relative;width:100vw;margin-left:calc(50% - 50vw);overflow:hidden;
-           margin-top:clamp(36px,7vw,60px);
-           -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
-                   mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);}
-.trilha{display:flex;gap:clamp(10px,1.6vw,16px);width:max-content;will-change:transform;
-        animation:desliza 60s linear infinite;}
-.carrossel:hover .trilha{animation-play-state:paused;}
-@keyframes desliza{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.trilha span{border:1px solid rgba(75,255,246,.45);color:var(--mist);white-space:nowrap;
-             padding:clamp(12px,2.4vw,16px) clamp(18px,3vw,26px);font-size:clamp(14px,3.4vw,17px);line-height:1;}
-@media(prefers-reduced-motion:reduce){
-  .carrossel{width:auto;margin-left:0;-webkit-mask-image:none;mask-image:none;}
-  .trilha{animation:none;flex-wrap:wrap;width:auto;justify-content:center;}
-  .trilha span.clone{display:none;}
-}
-
-/* ---------- seção com foto de fundo ---------- */
-.comfoto{position:relative;overflow:hidden;}
-.comfoto>.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3;filter:saturate(.6);}
-.comfoto>.veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,60,58,.9) 0%,rgba(25,60,58,.82) 45%,rgba(25,60,58,.93) 100%);}
-.comfoto>.wrap{position:relative;z-index:2;}
-
-/* ---------- investimento ---------- */
-.planos{display:flex;flex-direction:column;gap:clamp(20px,3.4vw,26px);margin-top:clamp(34px,6vw,52px);}
-@media(min-width:760px){.planos{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}}
-@media(min-width:1180px){.planos{grid-template-columns:repeat(4,1fr);}}
-.plano{display:flex;flex-direction:column;background:#fff;color:var(--ink);
-       border-top:3px solid var(--tiffany);padding:clamp(26px,5vw,34px);
-       transition:transform .4s ease,box-shadow .4s ease;}
-.plano:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(25,60,58,.1);}
-.plano.inv{background:var(--dark);color:var(--mist);border-top-color:var(--cyan);}
-.plano .nome{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:clamp(25px,5.6vw,31px);
-             color:var(--dark);line-height:1.1;}
-.plano.inv .nome{color:#fff;}
-.plano .resumo{font-size:clamp(15px,3.8vw,16.5px);line-height:1.5;margin-top:10px;opacity:.85;}
-.plano .comp{list-style:none;margin-top:18px;padding-top:16px;border-top:1px solid rgba(25,60,58,.16);}
-.plano.inv .comp{border-top-color:rgba(225,244,242,.28);}
-.plano .comp li{position:relative;padding-left:22px;margin-bottom:9px;font-size:clamp(15px,3.8vw,16.5px);line-height:1.45;}
-.plano .comp li:last-child{margin-bottom:0;}
-.plano .comp li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:1px;background:var(--tiffany);}
-.plano.inv .comp li::before{background:var(--cyan);}
-.plano .valores{margin-top:14px;}
-.plano .lin{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
-            padding:11px 0;border-top:1px solid rgba(25,60,58,.16);}
-.plano.inv .lin{border-top-color:rgba(225,244,242,.28);}
-.plano .lin b{font-family:'Jost',sans-serif;font-size:clamp(10.5px,2.6vw,11.5px);letter-spacing:.16em;
-              text-transform:uppercase;font-weight:600;opacity:.6;}
-.plano.inv .lin b{color:var(--mist);opacity:.8;}
-.plano .lin span{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;
-                 font-size:clamp(17px,4vw,20px);color:var(--tiffany);white-space:nowrap;}
-.plano.inv .lin span{color:var(--cyan);}
-
-.plano .eco+.valores{margin-top:8px;}
-.plano .eco{font-size:clamp(13px,3.3vw,14px);font-weight:600;color:var(--tiffany);margin-top:12px;}
-.plano.inv .eco{color:var(--cyan);}
-.plano .pgto{font-size:clamp(13.5px,3.4vw,14.5px);line-height:1.45;margin-top:14px;padding-top:12px;
-             border-top:1px solid rgba(25,60,58,.16);opacity:.75;}
-.plano.inv .pgto{border-top-color:rgba(225,244,242,.28);opacity:.9;}
-.etapas-valor{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(25,60,58,.14);
-              margin-top:clamp(28px,5vw,38px);}
-@media(min-width:760px){.etapas-valor{grid-template-columns:repeat(3,1fr);}}
-.etapas-valor>div{background:var(--paper);padding:clamp(18px,4vw,24px);}
-.etapas-valor .et{font-family:'Jost',sans-serif;font-size:clamp(10.5px,2.6vw,11.5px);letter-spacing:.18em;
-                  text-transform:uppercase;font-weight:600;color:var(--tiffany);}
-.etapas-valor .vl{font-family:'Fraunces',Georgia,serif;font-size:clamp(22px,5vw,27px);color:var(--dark);
-                  line-height:1.1;margin-top:9px;}
-.etapas-valor .ob{font-size:clamp(13px,3.3vw,14px);line-height:1.45;opacity:.7;margin-top:7px;}
-
-.plano .opcao{margin-top:12px;padding-top:12px;border-top:1px solid rgba(25,60,58,.16);}
-.plano.inv .opcao{border-top-color:rgba(225,244,242,.28);}
-.plano .opcao .cab{display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
-.plano .opcao .loc{font-family:'Jost',sans-serif;font-size:clamp(10.5px,2.6vw,11.5px);letter-spacing:.16em;
-                   text-transform:uppercase;font-weight:600;opacity:.6;}
-.plano.inv .opcao .loc{color:var(--mist);opacity:.85;}
-.plano .opcao .vl{font-family:'Fraunces',Georgia,serif;font-size:clamp(19px,4.4vw,23px);color:var(--dark);white-space:nowrap;}
-.plano.inv .opcao .vl{color:#fff;}
-.plano .opcao .fp{font-size:clamp(13px,3.3vw,14px);line-height:1.45;margin-top:8px;opacity:.75;}
-.plano .opcao.parc .loc{display:block;margin-bottom:8px;}
-.plano .opcao.parc .vlp{font-family:'Fraunces',Georgia,serif;font-size:clamp(20px,4.6vw,24px);
-                        color:var(--dark);line-height:1.15;}
-.plano.inv .opcao.parc .vlp{color:#fff;}
-.plano .opcao.parc .ent{font-size:clamp(13px,3.3vw,14px);line-height:1.45;margin-top:7px;opacity:.75;}
-.plano.inv .opcao.parc .ent{opacity:.9;}
-.plano.inv .opcao .fp{opacity:.9;}
-.plano .opcao .fp b{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
-                    font-weight:600;color:var(--tiffany);display:block;margin-bottom:3px;}
-.plano.inv .opcao .fp b{color:var(--cyan);}
-.etapas-valor .vl2{font-family:'Fraunces',Georgia,serif;font-size:clamp(22px,5vw,27px);color:var(--dark);
-                   line-height:1.1;margin-top:6px;}
-
-/* ---------- números ---------- */
-.nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(225,244,242,.25);
-      margin-top:clamp(30px,6vw,44px);}
-.nums>div{background:var(--dark);padding:clamp(20px,5vw,28px);}
-.nums .n{font-family:'Fraunces',Georgia,serif;font-size:clamp(34px,9vw,46px);color:#fff;line-height:1;}
-.nums .l{font-family:'Jost',sans-serif;font-size:clamp(10.5px,2.6vw,11.5px);letter-spacing:.18em;
-         text-transform:uppercase;color:var(--cyan);font-weight:600;margin-top:10px;line-height:1.4;}
-@media(min-width:760px){.nums{grid-template-columns:repeat(4,1fr);}}
-.nums.claro{background:rgba(25,60,58,.14);}
-.nums.claro>div{background:var(--paper);}
-.nums.claro .n{color:var(--dark);} .nums.claro .l{color:var(--tiffany);}
-
-/* ---------- quem somos ---------- */
-.sobre{display:flex;flex-direction:column;gap:clamp(30px,6vw,50px);}
-@media(min-width:960px){.sobre{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:clamp(40px,5vw,80px);}}
-
-/* ---------- logos ---------- */
-.marcas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,4vw,26px);
-        align-items:center;margin-top:clamp(30px,6vw,48px);}
-.marcas img{height:clamp(34px,8vw,46px);width:100%;object-fit:contain;opacity:.85;}
-@media(min-width:620px){.marcas{grid-template-columns:repeat(5,1fr);}}
-@media(min-width:1000px){.marcas{grid-template-columns:repeat(8,1fr);}}
-
-/* ---------- contato ---------- */
-.contato{position:relative;overflow:hidden;background:var(--deep);color:#fff;}
-.contato .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;filter:saturate(.6);}
-.contato .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,41,39,.9),rgba(15,41,39,.96));}
-.contato .wrap{position:relative;z-index:2;}
-.contato h2{color:var(--mist);}
-.contato h2 em{color:var(--cyan);}
-.canais{margin-top:clamp(32px,6vw,48px);display:flex;flex-direction:column;}
-.canais a{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding:clamp(16px,4vw,20px) 0;
-          border-top:1px solid rgba(225,244,242,.22);font-size:clamp(16px,4.2vw,19px);transition:padding-left .3s ease,color .3s ease;}
-.canais a:last-child{border-bottom:1px solid rgba(225,244,242,.22);}
-.canais a:hover{padding-left:12px;color:var(--cyan);}
-.canais b{font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(11px,2.8vw,12.5px);
-          letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);min-width:110px;}
-.fim{margin-top:clamp(36px,7vw,56px);padding-top:22px;border-top:1px solid rgba(225,244,242,.25);
-     font-family:'Jost',sans-serif;font-size:clamp(10.5px,2.6vw,12px);letter-spacing:.22em;
-     text-transform:uppercase;color:var(--mist);opacity:.8;}
-
-/* ---------- entrada em cena ---------- */
-.rev{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1);}
-.rev.vis{opacity:1;transform:none;}
-@media(prefers-reduced-motion:reduce){
-  .rev{opacity:1;transform:none;transition:none;}
-  .hero .bg{animation:none;} .rolar i{animation:none;}
-  html{scroll-behavior:auto;}
-}
+  :root{--dark:#193c3a;--tiffany:#00d0ca;--cyan:#4bfff6;--mist:#e1f4f2;--ink:#1c2b2a;}
+  *{margin:0;padding:0;box-sizing:border-box;border-radius:0 !important;}
+  html{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%;}
+  html,body{background:#0e1f1e;}
+  body{font-family:'Karla',Arial,sans-serif;color:var(--ink);}
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:500;}
+  .page{width:1280px;height:720px;position:relative;overflow:hidden;background:#fff;}
+  @media screen{.page{margin:28px auto;box-shadow:0 8px 40px rgba(0,0,0,.45);}}
+  @media print{html,body{background:#fff;}.page{margin:0;box-shadow:none;page-break-after:always;}.page:last-child{page-break-after:auto;}}
+  @page{size:1280px 720px;margin:0;}
+  .wm{position:absolute;top:34px;right:44px;height:52px;opacity:.4;z-index:9;}
+  .kicker{font-weight:700;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--tiffany);margin-bottom:14px;}
+  .pagenum{position:absolute;bottom:30px;right:44px;font-size:12px;letter-spacing:.2em;color:var(--dark);opacity:.45;font-weight:600;}
+  .footer-tag{position:absolute;bottom:30px;left:64px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dark);opacity:.45;font-weight:600;}
+  .brandname{font-family:'Jost',Arial,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:#fff;line-height:1;}
+  .brandrule{width:64px;height:2px;background:var(--cyan);opacity:.85;}
+  .cover{background:var(--dark);color:#fff;}
+  .cover .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;filter:saturate(.7);}
+  .cover .shade{position:absolute;inset:0;background:linear-gradient(120deg,rgba(25,60,58,.92) 0%,rgba(25,60,58,.55) 60%,rgba(25,60,58,.85) 100%);}
+  .cover .inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:54px 72px 46px;}
+  .cover .logo{height:72px;width:auto;}
+  .cover h1{font-size:54px;line-height:1.08;font-weight:500;color:#fff;}
+  .cover h1 em{font-style:italic;color:var(--cyan);}
+  .cover .sub{margin-top:18px;font-size:20px;font-weight:300;color:var(--mist);max-width:820px;line-height:1.55;}
+  .cover .baseline{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(225,244,242,.35);padding-top:20px;}
+  .cover .baseline span{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--mist);font-weight:600;}
+  .split{display:flex;height:100%;}
+  .split .txt{flex:1.15;padding:60px 56px 60px 64px;display:flex;flex-direction:column;justify-content:center;}
+  .split .pic{flex:.85;position:relative;}
+  .split .pic img{width:100%;height:100%;object-fit:cover;}
+  .split .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(25,60,58,.18),rgba(25,60,58,0));}
+  h2.title{font-size:38px;line-height:1.14;color:var(--dark);margin-bottom:18px;}
+  h2.title em{font-style:italic;color:var(--tiffany);}
+  p.lead{font-size:17px;line-height:1.6;color:var(--ink);margin-bottom:12px;text-align:justify;hyphens:auto;}
+  p.lead b{font-weight:700;color:var(--dark);}
+  ul.vds{list-style:none;}
+  ul.vds li{font-size:15px;line-height:1.5;padding-left:16px;position:relative;margin-bottom:8px;}
+  ul.vds li:before{content:"\00b7";position:absolute;left:0;color:var(--tiffany);font-weight:700;}
+  .spec{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.65;}
+  /* ---- cartões ---- */
+  .cartao{background:var(--mist);border-top:3px solid var(--tiffany);padding:22px 26px;display:flex;flex-direction:column;}
+  .cartao.esc{background:var(--dark);border-top-color:var(--cyan);color:var(--mist);}
+  .cartao .num{font-family:'Fraunces',Georgia,serif;font-size:15px;color:var(--tiffany);margin-bottom:8px;}
+  .cartao.esc .num{color:var(--cyan);}
+  .cartao .tt{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:20px;color:var(--dark);line-height:1.2;margin-bottom:12px;}
+  .cartao.esc .tt{color:#fff;}
+  .cartao p{font-size:14.5px;line-height:1.55;}
+  .cartao.esc p,.cartao.esc ul.vds li{color:var(--mist);}
+  .cartao ul.vds li{font-size:14px;line-height:1.45;margin-bottom:7px;}
+  .cartao.esc ul.vds li:before{color:var(--cyan);}
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;}
+  /* ---- investimento ---- */
+  .opc{padding:30px 34px;display:flex;flex-direction:column;background:var(--mist);border-top:3px solid var(--tiffany);}
+  .opc.esc{background:var(--dark);border-top-color:var(--cyan);color:var(--mist);}
+  .opc .lbl{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.65;margin-bottom:12px;}
+  .opc.esc .lbl{color:var(--cyan);opacity:1;}
+  .opc .val{font-family:'Fraunces',Georgia,serif;font-size:50px;color:var(--dark);line-height:1;}
+  .opc.esc .val{color:#fff;}
+  .opc .quem{font-size:15px;line-height:1.55;margin-top:18px;padding-top:16px;border-top:1px solid rgba(25,60,58,.22);}
+  .opc.esc .quem{border-top-color:rgba(225,244,242,.3);color:var(--mist);}
 </style>
 </head>
 <body>
 
-<div class="prog" id="prog"></div>
-
-<header class="topo" id="topo">
-  <div class="wrap">
-    <img src="assets/logo_vozdoser-bco.png" alt="Voz do Ser">
-    <div class="ident">Proposta · Highstil<span>21.10.2026</span></div>
-  </div>
-</header>
-
-<!-- ======================= HERO ======================= -->
-<div class="hero">
+<!-- ============ 1 · CAPA ============ -->
+<section class="page cover">
   <img class="bg" src="assets/palestrantes-no-convida-lu-falando.jpg" alt="">
-  <div class="veu"></div>
-  <div class="wrap assinatura">
-    <img src="assets/logo_vozdoser-bco.png" alt="Voz do Ser">
-  </div>
-  <div class="wrap">
-    <div class="marca">Voz do Ser</div>
-    <h1>Programa Liderança com <em>Propósito</em></h1>
-    <p class="sub lead">Comunicação, saúde mental, relacionamentos e inteligência relacional para as lideranças da Highstil.</p>
-    <div class="meta">
-      <span>Três etapas</span>
-      <span>Quatro estratégias</span>
-      <span>Até 12&nbsp;meses</span>
-    </div>
-    <a class="rolar" href="#programa"><i></i>Role para ver</a>
-  </div>
-</div>
-
-<!-- ======================= O PROGRAMA ======================= -->
-<section id="programa" class="manifesto">
-  <div class="wrap">
-    <div class="olho rev">O programa</div>
-    <h2 class="rev">Uma liderança que se comunica, engaja e <em>se relaciona</em></h2>
-  </div>
-  <div class="wrap dupla" style="margin-top:clamp(6px,2vw,18px);">
+  <div class="shade"></div>
+  <div class="inner">
+    <div style="display:flex;"><img class="logo" src="assets/logo_vozdoser-bco.png" alt="Voz do Ser"></div>
     <div>
-    <p class="apoio rev" style="margin-top:0;">O Programa Liderança com Propósito, desenhado para as lideranças da Highstil, tem o objetivo de desenvolver habilidades essenciais para uma liderança que valoriza comunicação, saúde mental, relacionamentos, inteligência emocional e inteligência relacional.</p>
-    <p class="apoio rev" style="margin-top:18px;">Com uma abordagem prática e aplicada aos desafios reais da liderança, o programa promove autoconhecimento, fortalece a comunicação e amplia a capacidade de engajar, desenvolver e se relacionar com diferentes perfis de pessoas.</p>
-    <p class="apoio rev" style="margin-top:18px;border-left:3px solid var(--tiffany);padding-left:20px;color:var(--dark);">Para que o programa possa se adequar ao momento, às necessidades e à profundidade de desenvolvimento desejada pela empresa, estruturamos <b>quatro estratégias de implementação: PP, P, M e G</b>. Cada uma propõe um nível diferente de aprofundamento e acompanhamento.</p>
+      <div class="kicker" style="color:var(--cyan);">Desenvolvimento individual · Wallquiria Santos</div>
+      <div class="brandname" style="font-size:44px;color:var(--tiffany);">Voz do Ser</div>
+      <div class="brandrule" style="margin:16px 0 20px;"></div>
+      <h1>Mentoria Liderança<br>com <em>Propósito</em></h1>
+      <p class="sub">Uma tarde de imersão dedicada a uma liderança mais consciente, afetiva e efetiva.</p>
+      <div style="margin-top:26px;display:flex;gap:40px;">
+        <div><div class="spec" style="color:var(--cyan);opacity:1;">Formato</div><div style="font-size:18px;color:#fff;margin-top:6px;">Presencial</div></div>
+        <div><div class="spec" style="color:var(--cyan);opacity:1;">Duração</div><div style="font-size:18px;color:#fff;margin-top:6px;">5 horas</div></div>
+        <div><div class="spec" style="color:var(--cyan);opacity:1;">Modalidade</div><div style="font-size:18px;color:#fff;margin-top:6px;">Mentoria individual e personalizada</div></div>
+      </div>
     </div>
-    <img class="retrato rev" src="assets/palestra-sobre-cultura-e-team-building-pov-plateia-cheia.jpg" alt="Treinamento Voz do Ser">
+    <div class="baseline"><span>Proposta · 22.10.2026</span><span>Instituto Voz do Ser</span></div>
   </div>
 </section>
 
-<!-- ======================= O QUE O PROGRAMA TRABALHA ======================= -->
-<section style="background:#fff;">
-  <div class="wrap">
-    <div class="olho rev">O programa</div>
-    <h2 class="rev">O que será <em>trabalhado</em></h2>
-    <div class="temas">
-      <div class="tema rev"><div class="n serif">01</div><div class="t">Inteligência Emocional e Relacional</div></div>
-      <div class="tema rev"><div class="n serif">02</div><div class="t">Comunicação com Propósito</div></div>
-      <div class="tema rev"><div class="n serif">03</div><div class="t">Cultura, estratégias e práticas de feedback</div></div>
-      <div class="tema rev"><div class="n serif">04</div><div class="t">Simulações de situações reais de liderança</div></div>
-      <div class="tema rev"><div class="n serif">05</div><div class="t">Estratégias de engajamento e motivação do time</div></div>
-      <div class="tema rev"><div class="n serif">06</div><div class="t">Teste, compreensão e lida com os diferentes Perfis de Comunicação</div></div>
-      <div class="tema rev"><div class="n serif">07</div><div class="t">Identificação de pontos fortes e oportunidades de desenvolvimento</div></div>
-      <div class="tema rev"><div class="n serif">08</div><div class="t">Construção de relações mais conscientes, seguras e produtivas</div></div>
+<!-- ============ 2 · SOBRE A MENTORIA ============ -->
+<section class="page">
+  <img class="wm" src="assets/marca-dagua.png" alt="">
+  <div class="split">
+    <div class="txt">
+      <div class="kicker">Sobre a mentoria</div>
+      <h2 class="title">Equilibrar resultados,<br>relacionamentos e <em>propósito</em></h2>
+      <p class="lead">Uma tarde de imersão dedicada ao desenvolvimento de uma liderança mais consciente, afetiva e efetiva, que saiba equilibrar resultados, relacionamentos e propósito.</p>
+      <p class="lead">A Mentoria Liderança com Propósito tem como objetivo aprofundar o autoconhecimento da líder, fortalecer seu posicionamento e desenvolver competências práticas para conduzir pessoas, cuidar das relações e construir uma equipe mais saudável, engajada e produtiva.</p>
+      <p class="lead" style="border-left:3px solid var(--tiffany);padding-left:18px;color:var(--dark);text-align:left;">Durante a mentoria, por meio de reflexões, ferramentas da <b>Comunicação com Propósito</b> e simulações práticas, trabalharemos os principais pilares de uma liderança que inspira, orienta, desenvolve e transforma.</p>
     </div>
+    <div class="pic"><img src="assets/fundadores-palestra-lideranca-com-proposito-sentados-no-sofa.jpg" alt=""></div>
   </div>
+  <div class="footer-tag">Mentoria Liderança com Propósito</div>
+  <div class="pagenum">02</div>
 </section>
 
-<!-- ======================= ETAPA 1 ======================= -->
-<section>
-  <div class="wrap">
-    <div class="olho rev">Etapa 1</div>
-    <h2 class="rev">Mentorias individuais para a <em>alta liderança</em></h2>
-    <p class="lead rev larg">15&nbsp;mentorias de 2&nbsp;horas cada, uma com cada líder de líderes</p>
-    <p class="rev larg" style="margin-top:clamp(20px,4vw,28px);">Os encontros usam como base a metodologia da Terapia da Comunicação e são espaços de escuta, avaliação e desenvolvimento individual, conduzidos por dois Terapeutas da Comunicação em cada sessão.</p>
-    <div class="etapas duo">
-      <div class="bloco rev">
-        <div class="tag">O que é trabalhado</div>
-        <ul class="itens" style="margin-top:14px;border-top:none;padding-top:0;">
-          <li>Avaliação da comunicação e do momento de cada líder</li>
-          <li>Inteligência emocional e relacional</li>
-          <li>Identificação de pontos fortes e oportunidades de desenvolvimento</li>
-          <li>Desafios de comunicação, relacionamento e liderança</li>
-          <li>Treinamentos mentais e práticos aplicados à realidade de cada participante</li>
+<!-- ============ 3 · ANTES DO ENCONTRO ============ -->
+<section class="page">
+  <img class="wm" src="assets/marca-dagua.png" alt="">
+  <div style="padding:40px 64px 0;">
+    <div class="kicker">Antes do encontro</div>
+    <h2 class="title" style="margin-bottom:14px;">O pré-work, para que a mentoria chegue <em>já direcionada</em></h2>
+    <div class="duo">
+      <div class="cartao">
+        <div class="tt">Formulário e testes de autoconhecimento</div>
+        <p>Antes do encontro, será realizado um pré-work, com o envio de um formulário personalizado e testes de autoconhecimento, para compreender o momento atual da líder, seus principais desafios, necessidades e objetivos de desenvolvimento.</p>
+      </div>
+      <div class="cartao esc">
+        <div class="tt">Um diagnóstico que desenha a tarde</div>
+        <p>Esse diagnóstico inicial permitirá construir uma experiência ainda mais direcionada e personalizada, com os conteúdos, as ferramentas e as simulações escolhidos a partir da realidade da líder.</p>
+      </div>
+    </div>
+    <div style="margin-top:14px;height:335px;overflow:hidden;">
+      <img src="assets/terapeutas-atendendo-banner.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+  </div>
+  <div class="footer-tag">Mentoria Liderança com Propósito</div>
+  <div class="pagenum">03</div>
+</section>
+
+<!-- ============ 4 · TEMAS 1 A 3 ============ -->
+<section class="page">
+  <img class="wm" src="assets/marca-dagua.png" alt="">
+  <div style="padding:48px 64px 0;">
+    <div class="kicker">Principais temas trabalhados</div>
+    <h2 class="title" style="margin-bottom:24px;">A líder, os <em>pilares</em> e os relacionamentos</h2>
+    <div class="trio">
+      <div class="cartao">
+        <div class="num">01</div>
+        <div class="tt">Autoconhecimento e posicionamento da líder</div>
+        <ul class="vds">
+          <li>Identificar padrões de comunicação e comportamento</li>
+          <li>Diferenciar amorosidade, necessidade de aprovação e medo de desagradar</li>
+          <li>Desenvolver uma liderança afetiva, assertiva e segura</li>
+          <li>Pitch e comunicação efetiva</li>
         </ul>
       </div>
-      <div class="bloco inv rev">
-        <div class="tag">Formato</div>
-        <h3>Um encontro por líder</h3>
-        <div class="quando">2&nbsp;horas cada · presencial in company ou online</div>
-        <p>Cada mentoria é desenhada a partir do momento e dos desafios do líder, com devolutiva e direcionamentos práticos para o seu dia a dia.</p>
+      <div class="cartao esc">
+        <div class="num">02</div>
+        <div class="tt">Os pilares da Liderança com Propósito</div>
+        <ul class="vds">
+          <li>Compreender os fundamentos de uma liderança com propósito: coerência, constância e escuta profunda</li>
+          <li>Equilibrar propósito, resultados e relacionamentos</li>
+          <li>Construir credibilidade, confiança e conexão com a equipe</li>
+        </ul>
+      </div>
+      <div class="cartao">
+        <div class="num">03</div>
+        <div class="tt">Relacionamentos, perfis de comunicação e GAP de propósito</div>
+        <ul class="vds">
+          <li>Compreender os diferentes perfis e suas necessidades</li>
+          <li>Desenvolver estratégias de comunicação personalizadas</li>
+          <li>Construir relações próximas e saudáveis, preservando os limites da liderança</li>
+        </ul>
       </div>
     </div>
-    <img class="faixa-foto banner rev" src="assets/terapeutas-atendendo-banner.jpg" alt="Mentoria individual do Voz do Ser">
   </div>
+  <div class="footer-tag">Mentoria Liderança com Propósito</div>
+  <div class="pagenum">04</div>
 </section>
 
-<!-- ======================= ETAPA 2 ======================= -->
-<section class="esc comfoto">
+<!-- ============ 5 · TEMAS 4 A 6 ============ -->
+<section class="page">
+  <img class="wm" src="assets/marca-dagua.png" alt="">
+  <div style="padding:48px 64px 0;">
+    <div class="kicker">Principais temas trabalhados</div>
+    <h2 class="title" style="margin-bottom:24px;">Feedback, saúde mental e <em>prática</em></h2>
+    <div class="trio">
+      <div class="cartao">
+        <div class="num">04</div>
+        <div class="tt">Feedback e desenvolvimento da equipe</div>
+        <ul class="vds">
+          <li>Aprender técnicas para dar e receber feedback</li>
+          <li>Criar rituais de acompanhamento e desenvolvimento</li>
+          <li>Analisar o organograma e definir responsabilidades de comunicação e feedback</li>
+        </ul>
+      </div>
+      <div class="cartao esc">
+        <div class="num">05</div>
+        <div class="tt">Saúde mental e segurança emocional</div>
+        <ul class="vds">
+          <li>Compreender o papel da liderança na saúde mental da equipe</li>
+          <li>Desenvolver ambientes de confiança e segurança emocional</li>
+          <li>Drivers para trabalhar a saúde mental do time</li>
+          <li>Aprender a acolher sem assumir responsabilidades que não pertencem à liderança</li>
+        </ul>
+      </div>
+      <div class="cartao">
+        <div class="num">06</div>
+        <div class="tt">Simulações e aplicação prática</div>
+        <ul class="vds">
+          <li>Trabalhar situações reais do cotidiano da líder</li>
+          <li>Simular conversas desafiadoras e feedbacks para diferentes perfis</li>
+          <li>Construir estratégias práticas para aplicar os aprendizados na rotina</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-tag">Mentoria Liderança com Propósito</div>
+  <div class="pagenum">05</div>
+</section>
+
+<!-- ============ 6 · INVESTIMENTO ============ -->
+<section class="page">
+  <img class="wm" src="assets/marca-dagua.png" alt="">
+  <div style="padding:52px 64px 0;">
+    <div class="kicker">Investimento</div>
+    <h2 class="title" style="margin-bottom:10px;">Duas <em>composições</em> de equipe</h2>
+    <p style="font-size:16px;line-height:1.6;max-width:1060px;margin-bottom:26px;">A mentoria de 5 horas é conduzida presencialmente, e a escolha é apenas de quem conduz o encontro.</p>
+    <div class="duo" style="height:330px;">
+      <div class="opc esc">
+        <div class="lbl">Composição 1</div>
+        <div class="val">R$ 4.500,00</div>
+        <div class="quem">Conduzida por <b style="color:#fff;">Luana Curti</b> e <b style="color:#fff;">Gabriel Hatt</b>, fundadores do Voz do Ser, com dois Terapeutas da Comunicação especializados em corporativo.</div>
+      </div>
+      <div class="opc">
+        <div class="lbl">Composição 2</div>
+        <div class="val">R$ 3.850,00</div>
+        <div class="quem">Conduzida por <b>quatro Terapeutas da Comunicação</b> especializados em corporativo.</div>
+      </div>
+    </div>
+    <div style="margin-top:26px;display:flex;gap:40px;align-items:center;border-top:1px solid rgba(25,60,58,.18);padding-top:20px;">
+      <div class="spec" style="color:var(--dark);">Formas de pagamento</div>
+      <div style="font-size:16.5px;">Em até <b>2 vezes no Pix</b></div>
+      <div style="font-size:16.5px;">Em até <b>10 vezes no cartão de crédito</b>, com os juros da máquina</div>
+    </div>
+  </div>
+  <div class="footer-tag">Mentoria Liderança com Propósito</div>
+  <div class="pagenum">06</div>
+</section>
+
+<!-- ============ 7 · QUEM SOMOS ============ -->
+<section class="page" style="background:var(--dark);">
+  <img class="wm" src="assets/marca-dagua.png" alt="">
+  <div style="display:flex;height:100%;">
+    <div style="flex:.92;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 0 40px 40px;">
+      <img src="assets/socios-voz-do-ser.png" alt="" style="display:block;width:100%;height:auto;max-height:560px;object-fit:contain;">
+      <div style="margin-top:14px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mist);opacity:.8;font-weight:700;">Sócios Voz do Ser</div>
+    </div>
+    <div style="flex:1.08;display:flex;flex-direction:column;justify-content:center;padding:56px 70px 56px 36px;">
+      <div class="brandname" style="font-size:36px;">Voz do Ser</div>
+      <div class="brandrule" style="margin:14px 0 18px;"></div>
+      <h2 class="title" style="color:#fff;">Um instituto de<br><em>Comunicação com Propósito</em></h2>
+      <p class="lead" style="color:var(--mist);font-size:16.5px;">O Voz do Ser é um Instituto de Comunicação com Propósito, autoconhecimento e mudança de mentalidade. Atuamos nas áreas clínica, organizacional e educacional, oferecendo terapias, cursos e treinamentos em comunicação, inteligência emocional e desenvolvimento pessoal.</p>
+      <p class="lead" style="color:var(--mist);font-size:16.5px;">Nossa abordagem une ciência, prática e espiritualidade, para promover transformação de relacionamentos e expansão consciencial.</p>
+      <div style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mist);opacity:.8;font-weight:700;margin-top:16px;margin-bottom:6px;">Nosso time</div>
+      <div style="display:flex;border-top:1px solid rgba(225,244,242,.3);border-bottom:1px solid rgba(225,244,242,.3);"><div style="flex:1;padding:16px 18px;"><div class="serif" style="font-size:34px;color:#fff;line-height:1;">10</div><div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-top:7px;line-height:1.4;">Sócios</div></div><div style="flex:1;padding:16px 18px;border-left:1px solid rgba(225,244,242,.3);"><div class="serif" style="font-size:34px;color:#fff;line-height:1;">15</div><div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-top:7px;line-height:1.4;">Professores</div></div><div style="flex:1;padding:16px 18px;border-left:1px solid rgba(225,244,242,.3);"><div class="serif" style="font-size:34px;color:#fff;line-height:1;">22</div><div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-top:7px;line-height:1.4;">Terapeutas</div></div><div style="flex:1;padding:16px 18px;border-left:1px solid rgba(225,244,242,.3);"><div class="serif" style="font-size:34px;color:#fff;line-height:1;">53</div><div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-top:7px;line-height:1.4;">Formados na<br>metodologia</div></div></div>
+    </div>
+  </div>
+  <div class="pagenum" style="color:var(--mist);">07</div>
+</section>
+
+<!-- ============ 8 · CLIENTES ============ -->
+<section class="page">
+  <img class="wm" src="assets/marca-dagua.png" alt="">
+  <div style="padding:56px 72px 0;">
+    <div class="kicker">Nossos clientes</div>
+    <h2 class="title" style="margin-bottom:20px;">Empresas e times que já viveram<br>a <em>Comunicação com Propósito</em></h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px 16px;align-items:center;">
+      <img src="assets/voz-logos06.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos04.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos11.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos15.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos16.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos18.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos21.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos23.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos24.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos32.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos35.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos36.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos38.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos39.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos41.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos42.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos44.png" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/logo-bancodobrasil.png" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/logo-buddhaspa.png" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos02.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos03.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos05.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos07.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos08.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos09.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos10.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos12.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos13.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos14.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos17.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos19.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos20.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos22.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos25.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos26.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos27.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos28.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos29.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos30.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos31.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos33.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos34.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos37.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos40.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/voz-logos43.webp" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+      <img src="assets/logo-conx-padrao.png" style="width:calc((100% - 7*16px)/8);height:50px;object-fit:contain;">
+    </div>
+    <div style="display:flex;border-top:1px solid rgba(25,60,58,.18);border-bottom:1px solid rgba(25,60,58,.18);margin-top:20px;"><div style="flex:1;padding:18px 20px;"><div class="serif" style="font-size:38px;color:var(--dark);line-height:1;">+50</div><div style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tiffany);font-weight:700;margin-top:8px;">Empresas atendidas</div></div><div style="flex:1;padding:18px 20px;border-left:1px solid rgba(25,60,58,.18);"><div class="serif" style="font-size:38px;color:var(--dark);line-height:1;">+180</div><div style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tiffany);font-weight:700;margin-top:8px;">Alunos na metodologia</div></div><div style="flex:1;padding:18px 20px;border-left:1px solid rgba(25,60,58,.18);"><div class="serif" style="font-size:38px;color:var(--dark);line-height:1;">+450</div><div style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tiffany);font-weight:700;margin-top:8px;">Treinamentos</div></div><div style="flex:1;padding:18px 20px;border-left:1px solid rgba(25,60,58,.18);"><div class="serif" style="font-size:38px;color:var(--dark);line-height:1;">+10000</div><div style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tiffany);font-weight:700;margin-top:8px;">Pessoas impactadas</div></div></div>
+  </div>
+  <div class="footer-tag">Mentoria Liderança com Propósito</div>
+  <div class="pagenum">08</div>
+</section>
+
+<!-- ============ 9 · CONTATO ============ -->
+<section class="page cover">
   <img class="bg" src="assets/palestrante-explicando-o-caminho-do-autoconhecimento-no-slide.jpg" alt="">
-  <div class="veu"></div>
-  <div class="wrap">
-    <div class="olho meio rev">Etapa 2</div>
-    <h2 class="rev centro" style="max-width:22ch;">O Workshop <em>Liderança com Propósito</em></h2>
-    <p class="lead rev centro" style="color:var(--mist);max-width:52ch;">Experiência imersiva de 4&nbsp;horas · 15&nbsp;líderes</p>
-    <p class="rev centro" style="color:var(--mist);max-width:62ch;margin-top:clamp(18px,4vw,26px);">Uma experiência imersiva desenvolvida para os 15&nbsp;líderes, unindo conteúdo, prática, reflexão e simulações de situações reais de liderança.</p>
-    <div class="caixa rev centro" style="border-left:none;border-top:3px solid var(--cyan);max-width:72ch;margin-top:clamp(26px,5vw,38px);">
-      <div class="olho meio" style="color:var(--cyan);">Onde acontece</div>
-      <p style="color:var(--mist);">O workshop poderá ser realizado <b style="color:#fff;">in company</b>, nas instalações da Highstil, ou <b style="color:#fff;">no Espaço Voz do Ser</b>. No Espaço Voz do Ser, a experiência é especialmente preparada para receber as lideranças, com café da manhã, intervenções musicais, sala, som e toda a estrutura e o suporte do espaço para que o encontro aconteça.</p>
-    </div>
-    <div class="carrossel rev">
-      <div class="trilha">
-      <span>Inteligência Emocional e Relacional</span>
-      <span>Comunicação com Propósito</span>
-      <span>Cultura e estratégias de dar e receber feedback</span>
-      <span>Perfis de Comunicação</span>
-      <span>Engajamento e motivação de equipes</span>
-      <span>Simulações e práticas de conversas de liderança</span>
-      <span>Construção de relações mais conscientes, seguras e produtivas</span>
-      <span class="clone" aria-hidden="true">Inteligência Emocional e Relacional</span>
-      <span class="clone" aria-hidden="true">Comunicação com Propósito</span>
-      <span class="clone" aria-hidden="true">Cultura e estratégias de dar e receber feedback</span>
-      <span class="clone" aria-hidden="true">Perfis de Comunicação</span>
-      <span class="clone" aria-hidden="true">Engajamento e motivação de equipes</span>
-      <span class="clone" aria-hidden="true">Simulações e práticas de conversas de liderança</span>
-      <span class="clone" aria-hidden="true">Construção de relações mais conscientes, seguras e produtivas</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= ETAPA 3 ======================= -->
-<section style="background:#fff;">
-  <div class="wrap">
-    <div class="olho rev">Etapa 3</div>
-    <h2 class="rev">Treinamentos bimestrais com <em>mentorias coletivas</em></h2>
-    <p class="lead rev larg">Seis encontros presenciais de até 2&nbsp;horas, a cada dois meses, ao longo de um ano, para 50&nbsp;participantes</p>
-    <p class="rev larg" style="margin-top:clamp(20px,4vw,28px);">Após o workshop, inicia-se um processo de acompanhamento e desenvolvimento contínuo. Cada encontro é dedicado a uma temática importante para o exercício da liderança, conduzido por uma dupla de Terapeutas da Comunicação especializados, combinando uma parte expositiva e prática com um espaço de mentoria coletiva, no qual os líderes trazem dúvidas, desafios e situações reais do dia a dia.</p>
-    <div class="etapas duo">
-      <div class="bloco rev" style="background:var(--mist);">
-        <div class="tag">Temáticas que poderão ser trabalhadas</div>
-        <ul class="itens" style="margin-top:14px;border-top:none;padding-top:0;">
-          <li>Inteligência Emocional e Relacional</li>
-          <li>Engajamento e motivação de equipes</li>
-          <li>Conversas corajosas e gestão de conflitos</li>
-          <li>Diversidade e relações no ambiente de trabalho</li>
-          <li>Prevenção ao assédio moral e sexual</li>
-          <li>Comunicação, feedback e segurança emocional</li>
-        </ul>
-      </div>
-      <div class="bloco inv rev">
-        <div class="tag">O objetivo</div>
-        <h3>Continuidade ao desenvolvimento</h3>
-        <div class="quando">6&nbsp;encontros presenciais in company · 50&nbsp;participantes</div>
-        <p>Garantir que os aprendizados sejam revisitados, aprofundados e aplicados à realidade da liderança, com acompanhamento ao longo de todo o ano.</p>
-      </div>
-    </div>
-    <img class="faixa-foto rev" src="assets/palestra-perfil-de-comunicacao-pov-plateia-alegre.jpg" alt="Treinamento bimestral do Voz do Ser">
-  </div>
-</section>
-
-<!-- ======================= AS QUATRO ESTRATÉGIAS ======================= -->
-<section class="comfoto" style="background:var(--deep);color:var(--mist);">
-  <img class="bg" src="assets/corporativo-convida-aproximado-lu-e-gabs-sorrindo.jpg" alt="">
-  <div class="veu"></div>
-  <div class="wrap">
-    <div class="olho rev">Estratégias de implementação</div>
-    <h2 class="rev" style="color:#fff;">Quatro caminhos, <em>PP, P, M e G</em></h2>
-    <p class="lead rev larg" style="color:var(--mist);">Cada estratégia combina as etapas de um jeito diferente, permitindo que a Highstil escolha o formato que melhor responde aos seus desafios atuais e aos objetivos com as lideranças.</p>
-    <div class="estrategias">
-
-      <div class="estrat rev">
-        <div class="selo serif">PP</div>
-        <div class="tag">Estratégia PP</div>
-        <h3>Só o workshop</h3>
-        <ul class="comp">
-          <li>Etapa 2 · Workshop de 4&nbsp;horas para 15&nbsp;líderes <i style="opacity:.7;">(in company ou no Voz do Ser)</i></li>
-        </ul>
-      </div>
-
-      <div class="estrat rev">
-        <div class="selo serif">P</div>
-        <div class="tag">Estratégia P</div>
-        <h3>Mentorias individuais e workshop</h3>
-        <ul class="comp">
-          <li>Etapa 1 · 15&nbsp;mentorias individuais</li>
-          <li>Etapa 2 · Workshop de 4&nbsp;horas <i style="opacity:.7;">(in company ou no Voz do Ser)</i></li>
-        </ul>
-      </div>
-
-      <div class="estrat rev">
-        <div class="selo serif">M</div>
-        <div class="tag">Estratégia M</div>
-        <h3>Workshop e acompanhamento no ano</h3>
-        <ul class="comp">
-          <li>Etapa 2 · Workshop de 4&nbsp;horas <i style="opacity:.7;">(in company ou no Voz do Ser)</i></li>
-          <li>Etapa 3 · 6&nbsp;treinamentos bimestrais para 50&nbsp;pessoas</li>
-        </ul>
-      </div>
-
-      <div class="estrat inv rev">
-        <div class="selo serif">G</div>
-        <div class="tag">Estratégia G</div>
-        <h3>A jornada completa</h3>
-        <ul class="comp">
-          <li>Etapa 1 · 15&nbsp;mentorias individuais</li>
-          <li>Etapa 2 · Workshop de 4&nbsp;horas <i style="opacity:.7;">(in company ou no Voz do Ser)</i></li>
-          <li>Etapa 3 · 6&nbsp;treinamentos bimestrais para 50&nbsp;pessoas</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ======================= INVESTIMENTO ======================= -->
-<section id="investimento" style="background:#fff;">
-  <div class="wrap">
-    <div class="olho rev">Investimento</div>
-    <h2 class="rev">As quatro <em>estratégias</em></h2>
-    <p class="rev larg">As mentorias individuais e os treinamentos bimestrais acontecem sempre na Highstil. A única etapa com escolha de local é o <b>workshop de 4&nbsp;horas</b>, que pode ser realizado in company ou no Espaço Voz do Ser.</p>
-    <p class="rev larg" style="margin-top:14px;border-left:3px solid var(--tiffany);padding-left:20px;color:var(--dark);">No Espaço Voz do Ser, o workshop inclui o café da manhã para os 15&nbsp;líderes, além da sala, do som, de toda a estrutura do espaço e do suporte necessário para que o encontro aconteça.</p>
-    <div class="etapas-valor rev">
-      <div><div class="et">Etapa 1 · sempre na Highstil</div><div class="vl">R$&nbsp;30.030,00</div><div class="ob">15&nbsp;mentorias individuais</div></div>
-      <div><div class="et">Etapa 2 · escolha de local</div><div class="vl">R$&nbsp;7.665,00 · in company</div><div class="vl2">R$&nbsp;10.165,00 · no Voz do Ser</div><div class="ob">Workshop de 4&nbsp;horas para 15&nbsp;líderes</div></div>
-      <div><div class="et">Etapa 3 · sempre na Highstil</div><div class="vl">R$&nbsp;22.050,00</div><div class="ob">6&nbsp;treinamentos bimestrais</div></div>
-    </div>
-    <div class="planos">
-      <div class="plano rev">
-        <div class="nome">Proposta PP</div>
-        <div class="resumo">Só o workshop.</div>
-        <ul class="comp"><li>Etapa 2 · Workshop de 4&nbsp;horas para 15&nbsp;líderes</li></ul>
-        
-        <div class="valores"><div class="opcao"><div class="cab"><div class="loc">Workshop in company</div><div class="vl">R$ 7.665,00</div></div></div><div class="opcao"><div class="cab"><div class="loc">Workshop no Voz do Ser</div><div class="vl">R$ 10.165,00</div></div></div><div class="opcao"><div class="fp"><b>Forma de pagamento</b>Em até 2&nbsp;vezes</div></div></div>
-      </div>
-      <div class="plano rev">
-        <div class="nome">Proposta P</div>
-        <div class="resumo">Mentorias individuais e workshop.</div>
-        <ul class="comp"><li>Etapa 1 · 15&nbsp;mentorias individuais</li><li>Etapa 2 · Workshop de 4&nbsp;horas</li></ul>
-        <div class="eco">10% de desconto no conjunto</div>
-        <div class="valores"><div class="opcao"><div class="cab"><div class="loc">Com workshop in company</div><div class="vl">R$ 33.925,50</div></div></div><div class="opcao"><div class="cab"><div class="loc">Com workshop no Voz do Ser</div><div class="vl">R$ 36.175,50</div></div></div><div class="opcao"><div class="fp"><b>Forma de pagamento</b>Em até 3&nbsp;vezes</div></div></div>
-      </div>
-      <div class="plano rev">
-        <div class="nome">Proposta M</div>
-        <div class="resumo">Workshop e acompanhamento no ano.</div>
-        <ul class="comp"><li>Etapa 2 · Workshop de 4&nbsp;horas</li><li>Etapa 3 · 6&nbsp;treinamentos bimestrais</li></ul>
-        <div class="eco">10% de desconto no conjunto</div>
-        <div class="valores"><div class="opcao parc"><div class="loc">Com workshop in company</div><div class="vlp">9&nbsp;parcelas de<br>R$&nbsp;2.304,83</div><div class="ent">entrada de R$&nbsp;6.000,00</div></div><div class="opcao parc"><div class="loc">Com workshop no Voz do Ser</div><div class="vlp">9&nbsp;parcelas de<br>R$&nbsp;2.577,20</div><div class="ent">entrada de R$&nbsp;5.798,70</div></div></div>
-      </div>
-      <div class="plano inv rev">
-        <div class="nome">Proposta G</div>
-        <div class="resumo">A jornada completa.</div>
-        <ul class="comp"><li>Etapa 1 · 15&nbsp;mentorias individuais</li><li>Etapa 2 · Workshop de 4&nbsp;horas</li><li>Etapa 3 · 6&nbsp;treinamentos bimestrais</li></ul>
-        <div class="eco">15% de desconto no conjunto</div>
-        <div class="valores"><div class="opcao parc"><div class="loc">Com workshop in company</div><div class="vlp">11&nbsp;parcelas de<br>R$&nbsp;3.693,33</div><div class="ent">entrada de R$&nbsp;10.156,65</div></div><div class="opcao parc"><div class="loc">Com workshop no Voz do Ser</div><div class="vlp">11&nbsp;parcelas de<br>R$&nbsp;3.847,87</div><div class="ent">entrada de R$&nbsp;10.581,65</div></div></div>
-      </div>
-    </div>
-    <p class="rev" style="font-size:clamp(13.5px,3.4vw,14.5px);opacity:.7;margin-top:clamp(24px,5vw,32px);">Os valores das estratégias P, M e G já estão com o desconto aplicado ao conjunto.</p>
-  </div>
-</section>
-
-<!-- ======================= QUEM SOMOS ======================= -->
-<section class="esc">
-  <div class="wrap sobre">
-    <div class="rev">
-      <img src="assets/socios-voz-do-ser.png" alt="Sócios Voz do Ser">
-    </div>
+  <div class="shade"></div>
+  <div class="inner">
+    <div style="display:flex;"><img class="logo" src="assets/logo_vozdoser-bco.png" alt="Voz do Ser"></div>
     <div>
-      <div class="olho rev">Quem somos</div>
-      <h2 class="rev">Um instituto de <em>Comunicação com Propósito</em></h2>
-      <p class="rev" style="color:var(--mist);">O Voz do Ser é um Instituto de Comunicação com Propósito, autoconhecimento e mudança de mentalidade. Atuamos nas áreas clínica, organizacional e educacional, oferecendo terapias, cursos e treinamentos em comunicação, inteligência emocional e desenvolvimento pessoal.</p>
-      <p class="rev" style="color:var(--mist);margin-top:16px;">Nossa abordagem une ciência, prática e espiritualidade, para promover transformação de relacionamentos e expansão consciencial.</p>
-      <div class="nums rev">
-        <div><div class="n" data-alvo="10">10</div><div class="l">Sócios</div></div>
-        <div><div class="n" data-alvo="15">15</div><div class="l">Professores</div></div>
-        <div><div class="n" data-alvo="22">22</div><div class="l">Terapeutas</div></div>
-        <div><div class="n" data-alvo="53">53</div><div class="l">Formados na metodologia</div></div>
+      <div class="kicker" style="color:var(--cyan);">Próximo passo</div>
+      <h1 style="font-size:50px;">Uma tarde que muda<br><em>o jeito de liderar</em></h1>
+      <p class="sub">Estamos à disposição para alinhar a data e enviar o pré-work.</p>
+      <div style="margin-top:28px;max-width:860px;display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;gap:40px;">
+          <a href="https://wa.me/5511987792244" style="flex:1;color:#fff;text-decoration:none;font-size:18.5px;"><b style="color:var(--cyan);">WhatsApp</b> · (11) 98779-2244 · Silvia Maciel</a>
+          <a href="mailto:falecom@vozdoser.com.br" style="flex:1;color:#fff;text-decoration:none;font-size:18.5px;"><b style="color:var(--cyan);">E-mail</b> · falecom@vozdoser.com.br</a>
+        </div>
+        <div style="display:flex;gap:40px;">
+          <a href="https://vozdoser.com.br/" style="color:#fff;text-decoration:none;font-size:18.5px;"><b style="color:var(--cyan);">Site</b> · vozdoser.com.br</a>
+          <a href="https://www.instagram.com/vozdoser/" style="color:#fff;text-decoration:none;font-size:18.5px;"><b style="color:var(--cyan);">Instagram</b> · @vozdoser</a>
+          <a href="https://www.linkedin.com/school/voz-do-ser/" style="color:#fff;text-decoration:none;font-size:18.5px;"><b style="color:var(--cyan);">LinkedIn</b> · Voz do Ser</a>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Afr%C3%A2nio%20Peixoto%2C%20250%20-%20Butant%C3%A3%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005507-000" style="color:#fff;text-decoration:none;font-size:18.5px;"><b style="color:var(--cyan);">Endereço</b> · Av. Afrânio Peixoto, 250 · Butantã · São Paulo · SP · 05507-000</a>
       </div>
     </div>
+    <div class="baseline"><span>Instituto Voz do Ser · A voz de quem realmente somos</span><span>09</span></div>
   </div>
 </section>
 
-<!-- ======================= CLIENTES ======================= -->
-<section>
-  <div class="wrap">
-    <div class="olho rev">Nossos clientes</div>
-    <h2 class="rev">Empresas e times que já viveram a <em>Comunicação com Propósito</em></h2>
-    <div class="marcas rev">
-      <img src="assets/voz-logos06.webp" alt="">
-      <img src="assets/voz-logos04.webp" alt="">
-      <img src="assets/voz-logos11.webp" alt="">
-      <img src="assets/voz-logos15.webp" alt="">
-      <img src="assets/voz-logos16.webp" alt="">
-      <img src="assets/voz-logos18.webp" alt="">
-      <img src="assets/voz-logos21.webp" alt="">
-      <img src="assets/voz-logos23.webp" alt="">
-      <img src="assets/voz-logos24.webp" alt="">
-      <img src="assets/voz-logos32.webp" alt="">
-      <img src="assets/voz-logos35.webp" alt="">
-      <img src="assets/voz-logos36.webp" alt="">
-      <img src="assets/voz-logos38.webp" alt="">
-      <img src="assets/voz-logos39.webp" alt="">
-      <img src="assets/voz-logos41.webp" alt="">
-      <img src="assets/voz-logos42.webp" alt="">
-      <img src="assets/voz-logos44.png" alt="">
-      <img src="assets/logo-bancodobrasil.png" alt="">
-      <img src="assets/logo-buddhaspa.png" alt="">
-      <img src="assets/voz-logos02.webp" alt="">
-      <img src="assets/voz-logos03.webp" alt="">
-      <img src="assets/voz-logos05.webp" alt="">
-      <img src="assets/voz-logos07.webp" alt="">
-      <img src="assets/voz-logos08.webp" alt="">
-      <img src="assets/voz-logos09.webp" alt="">
-      <img src="assets/voz-logos10.webp" alt="">
-      <img src="assets/voz-logos12.webp" alt="">
-      <img src="assets/voz-logos13.webp" alt="">
-      <img src="assets/voz-logos14.webp" alt="">
-      <img src="assets/voz-logos17.webp" alt="">
-      <img src="assets/voz-logos19.webp" alt="">
-      <img src="assets/voz-logos20.webp" alt="">
-      <img src="assets/voz-logos22.webp" alt="">
-      <img src="assets/voz-logos25.webp" alt="">
-      <img src="assets/voz-logos26.webp" alt="">
-      <img src="assets/voz-logos27.webp" alt="">
-      <img src="assets/voz-logos28.webp" alt="">
-      <img src="assets/voz-logos29.webp" alt="">
-      <img src="assets/voz-logos30.webp" alt="">
-      <img src="assets/voz-logos31.webp" alt="">
-      <img src="assets/voz-logos33.webp" alt="">
-      <img src="assets/voz-logos34.webp" alt="">
-      <img src="assets/voz-logos37.webp" alt="">
-      <img src="assets/voz-logos40.webp" alt="">
-      <img src="assets/voz-logos43.webp" alt="">
-      <img src="assets/logo-conx-padrao.png" alt="">
-    </div>
-    <div class="nums claro rev">
-      <div><div class="n" data-alvo="50" data-mais="1">+50</div><div class="l">Empresas atendidas</div></div>
-      <div><div class="n" data-alvo="180" data-mais="1">+180</div><div class="l">Alunos na metodologia</div></div>
-      <div><div class="n" data-alvo="450" data-mais="1">+450</div><div class="l">Treinamentos</div></div>
-      <div><div class="n" data-alvo="10000" data-mais="1">+10000</div><div class="l">Pessoas impactadas</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================= CONTATO ======================= -->
-<section id="contato" class="contato">
-  <img class="bg" src="assets/recorte-da-plateia-prestando-atencao.jpg" alt="">
-  <div class="veu"></div>
-  <div class="wrap">
-    <div class="olho rev">Próximo passo</div>
-    <h2 class="rev">Escolhido o caminho, <em>desenhamos o calendário</em></h2>
-    <p class="lead rev" style="color:var(--mist);max-width:56ch;">Estamos à disposição para detalhar a estratégia que fizer mais sentido para a Highstil e alinhar as datas.</p>
-    <div class="canais rev">
-      <a href="https://wa.me/5511987792244"><b>WhatsApp</b><span>(11) 98779-2244 · Silvia Maciel</span></a>
-      <a href="mailto:falecom@vozdoser.com.br"><b>E-mail</b><span>falecom@vozdoser.com.br</span></a>
-      <a href="https://vozdoser.com.br/"><b>Site</b><span>vozdoser.com.br</span></a>
-      <a href="https://www.instagram.com/vozdoser/"><b>Instagram</b><span>@vozdoser</span></a>
-      <a href="https://www.linkedin.com/school/voz-do-ser/"><b>LinkedIn</b><span>Voz do Ser</span></a>
-      <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Afr%C3%A2nio%20Peixoto%2C%20250%20-%20Butant%C3%A3%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005507-000"><b>Endereço</b><span>Av. Afrânio Peixoto, 250 · Butantã · São Paulo · SP</span></a>
-    </div>
-    <div class="fim">Instituto Voz do Ser · A voz de quem realmente somos</div>
-  </div>
-</section>
-
-<script>
-(function(){
-  var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  var prog = document.getElementById('prog'), topo = document.getElementById('topo');
-  function naRolagem(){
-    var h = document.documentElement.scrollHeight - window.innerHeight;
-    prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
-    topo.classList.toggle('on', window.scrollY > window.innerHeight * 0.75);
-  }
-  window.addEventListener('scroll', naRolagem, {passive:true});
-  naRolagem();
-
-  var alvos = document.querySelectorAll('.rev');
-  if (reduz || !('IntersectionObserver' in window)) {
-    alvos.forEach(function(el){ el.classList.add('vis'); });
-  } else {
-    var obs = new IntersectionObserver(function(ent){
-      ent.forEach(function(e){
-        if (e.isIntersecting){ e.target.classList.add('vis'); obs.unobserve(e.target); }
-      });
-    }, {rootMargin:'0px 0px -12% 0px', threshold:0.08});
-    alvos.forEach(function(el, i){ el.style.transitionDelay = ((i % 4) * 70) + 'ms'; obs.observe(el); });
-  }
-
-  var nums = document.querySelectorAll('.n[data-alvo]');
-  if (!reduz && 'IntersectionObserver' in window){
-    var obsN = new IntersectionObserver(function(ent){
-      ent.forEach(function(e){
-        if (!e.isIntersecting) return;
-        var el = e.target, fim = parseInt(el.dataset.alvo, 10), mais = el.dataset.mais ? '+' : '';
-        var t0 = null, dur = 1100;
-        function passo(t){
-          if (!t0) t0 = t;
-          var p = Math.min((t - t0) / dur, 1);
-          el.textContent = mais + Math.round(fim * (1 - Math.pow(1 - p, 3)));
-          if (p < 1) requestAnimationFrame(passo);
-        }
-        requestAnimationFrame(passo);
-        obsN.unobserve(el);
-      });
-    }, {threshold:0.5});
-    nums.forEach(function(el){ obsN.observe(el); });
-  }
-})();
-</script>
 </body>
 </html>
